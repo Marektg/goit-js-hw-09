@@ -19,13 +19,13 @@
   },
   "dependencies": {
     "@vimeo/player": "^2.16.4",
-    "flatpickr": "^4.6.13",
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
     "simplelightbox": "^2.10.3"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.5.0",
+    "flatpickr": "^4.6.13",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"

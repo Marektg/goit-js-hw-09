@@ -40,14 +40,14 @@ function countdown() {
         days.innerHTML = Math.floor(daysNumber);
     }
     
-    let hoursNumber = timeToRun / (60 * 60 * 1000);
+    let hoursNumber = timeToRun / (60 * 60 * 1000) - Math.floor(daysNumber)*24;
     if (hoursNumber < 10) {
         hours.innerHTML = `0${Math.floor(hoursNumber)}`;
     }
     else {
         hours.innerHTML = Math.floor(hoursNumber);
     }
-    let minutesNumber = (timeToRun / (60 * 1000)) - Math.floor(hoursNumber) * 60;
+    let minutesNumber = (timeToRun / (60 * 1000)) - Math.floor(hoursNumber) * 60-Math.floor(daysNumber)*24*60;
     if (minutesNumber < 10) {
         minutes.innerHTML = `0${Math.floor(minutesNumber)}`;
     }
@@ -55,7 +55,7 @@ function countdown() {
         minutes.innerHTML = Math.floor(minutesNumber);
     }
     
-    let secondsNumber = (timeToRun / 1000) - Math.floor(minutesNumber) * 60 - Math.floor(hoursNumber) * 60 * 60;
+    let secondsNumber = (timeToRun / 1000) - Math.floor(minutesNumber) * 60 - Math.floor(hoursNumber) * 60 * 60 - Math.floor(daysNumber) * 24 * 60*60;
     if (secondsNumber < 10) {
         seconds.innerHTML = `0${Math.floor(secondsNumber)}`;
     }
